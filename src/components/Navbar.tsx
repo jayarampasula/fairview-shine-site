@@ -16,9 +16,13 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur border-b border-border">
-      <div className="container flex items-center justify-between h-16">
-        <a href="#" className="flex items-center gap-2">
-          <img src={logo} alt="FAIRVIEW Consulting Group" className="h-14 w-auto rounded-sm" />
+      <div className="container flex items-center justify-between h-20">
+        <a href="#" className="flex items-center gap-3">
+          <img src={logo} alt="FAIRVIEW Consulting Group" className="h-16 w-auto rounded" />
+          <div className="hidden sm:flex flex-col leading-tight">
+            <span className="text-base font-bold tracking-wide text-primary font-heading">FAIRVIEW</span>
+            <span className="text-[10px] font-medium tracking-widest uppercase text-muted-foreground font-body">Consulting Group</span>
+          </div>
         </a>
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (

@@ -6,12 +6,12 @@ import { MapPin, Mail, Phone } from "lucide-react";
 import { toast } from "sonner";
 
 const Contact = () => {
-  const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", message: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Thank you! We'll be in touch shortly.");
-    setForm({ name: "", email: "", company: "", message: "" });
+    setForm({ name: "", email: "", phone: "", company: "", message: "" });
   };
 
   return (
@@ -37,10 +37,8 @@ const Contact = () => {
               </div>
               <div className="flex items-start gap-4">
                 <Mail size={20} className="text-primary mt-0.5 shrink-0" />
-                <a href="mailto:info@fairviewconsultinggroup.com" className="text-foreground font-body hover:text-accent transition-colors">
                 <a href="mailto:cavenu123@gmail.com" className="text-foreground font-body hover:text-accent transition-colors">
                   cavenu123@gmail.com
-                </a>
                 </a>
               </div>
               <div className="flex items-start gap-4">
@@ -65,6 +63,13 @@ const Contact = () => {
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               required
+              className="rounded-sm"
+            />
+            <Input
+              type="tel"
+              placeholder="Phone Number"
+              value={form.phone}
+              onChange={(e) => setForm({ ...form, phone: e.target.value })}
               className="rounded-sm"
             />
             <Input

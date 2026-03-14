@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur border-b border-border">
       <div className="container flex items-center justify-between h-16">
         <a href="#" className="flex items-center gap-2">
-          <img src={logo} alt="FAIRVIEW Consulting Group" className="h-10 w-auto" />
+          <img src={logo} alt="FAIRVIEW Consulting Group" className="h-14 w-auto rounded-sm" />
         </a>
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (

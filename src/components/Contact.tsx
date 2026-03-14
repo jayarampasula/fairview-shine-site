@@ -66,6 +66,13 @@ const Contact = () => {
               className="rounded-sm"
             />
             <Input
+              type="tel"
+              placeholder="Phone Number"
+              value={form.phone}
+              onChange={(e) => setForm({ ...form, phone: e.target.value })}
+              className="rounded-sm"
+            />
+            <Input
               placeholder="Company Name"
               value={form.company}
               onChange={(e) => setForm({ ...form, company: e.target.value })}

@@ -4,7 +4,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => (
   <section
-    className="relative min-h-[90vh] flex items-center justify-start pt-16"
+    className="relative min-h-[90vh] flex items-center justify-start pt-20"
     style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center" }}
   >
     <div className="absolute inset-0 hero-overlay" />

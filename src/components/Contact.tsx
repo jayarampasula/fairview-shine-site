@@ -6,12 +6,12 @@ import { MapPin, Mail, Phone } from "lucide-react";
 import { toast } from "sonner";
 
 const Contact = () => {
-  const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", message: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Thank you! We'll be in touch shortly.");
-    setForm({ name: "", email: "", company: "", message: "" });
+    setForm({ name: "", email: "", phone: "", company: "", message: "" });
   };
 
   return (

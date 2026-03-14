@@ -45,7 +45,7 @@ const Contact = () => {
               </div>
               <div className="flex items-start gap-4">
                 <Phone size={20} className="text-primary mt-0.5 shrink-0" />
-                <span className="text-foreground font-body">+91 XXXXX XXXXX</span>
+                <a href="tel:+919703218701" className="text-foreground font-body hover:text-accent transition-colors">+91 97032 18701</a>
               </div>
             </div>
           </div>

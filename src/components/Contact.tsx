@@ -8,10 +8,35 @@ import { toast } from "sonner";
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thank you! We'll be in touch shortly.");
-    setForm({ name: "", email: "", phone: "", company: "", message: "" });
+    setSubmitting(true);
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/info@fairviewconsulting.in", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          company: form.company,
+          message: form.message,
+          _subject: `New consultation request from ${form.name}`,
+        }),
+      });
+      if (res.ok) {
+        toast.success("Thank you! We'll be in touch shortly.");
+        setForm({ name: "", email: "", phone: "", company: "", message: "" });
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch {
+      toast.error("Network error. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (

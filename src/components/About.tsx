@@ -15,12 +15,12 @@ const About = () => (
         <h2 className="text-3xl md:text-4xl font-bold font-display text-foreground mb-6">
           About FAIRVIEW Consulting Group
         </h2>
-        <p className="text-muted-foreground font-body text-lg leading-relaxed">
+        <p className="text-muted-foreground font-body text-lg leading-relaxed text-left">
           FAIRVIEW Consulting Group provides reliable offshore accounting and finance support to U.S. businesses,
           CPA firms, and advisory firms. Our mission is to help organizations improve operational efficiency,
           maintain compliance, and gain better financial insights through high-quality accounting support.
         </p>
-        <p className="text-muted-foreground font-body text-lg leading-relaxed mt-4">
+        <p className="text-muted-foreground font-body text-lg leading-relaxed mt-4 text-left">
           With expertise across bookkeeping, financial reporting, audit support, and financial planning & analysis,
           we act as an extended finance team for our clients. Our Hyderabad-based team works closely with U.S. firms
           to deliver scalable, secure, and cost-effective finance operations.

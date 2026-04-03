@@ -37,8 +37,8 @@ const Contact = () => {
               </div>
               <div className="flex items-start gap-4">
                 <Mail size={20} className="text-primary mt-0.5 shrink-0" />
-                <a href="mailto:cavenu123@gmail.com" className="text-foreground font-body hover:text-accent transition-colors">
-                  cavenu123@gmail.com
+                <a href="mailto:info@fairviewconsulting.in" className="text-foreground font-body hover:text-accent transition-colors">
+                  info@fairviewconsulting.in
                 </a>
               </div>
               <div className="flex items-start gap-4">

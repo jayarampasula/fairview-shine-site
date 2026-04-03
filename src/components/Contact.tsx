@@ -111,8 +111,8 @@ const Contact = () => {
               required
               className="rounded-sm resize-none"
             />
-            <Button type="submit" size="lg" className="w-full">
-              Schedule Consultation
+            <Button type="submit" size="lg" className="w-full" disabled={submitting}>
+              {submitting ? "Sending..." : "Schedule Consultation"}
             </Button>
           </form>
         </div>
